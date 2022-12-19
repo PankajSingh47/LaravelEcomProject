@@ -17,6 +17,11 @@ use App\Http\Controllers\ProductController;
 Route::get('/signin', function () {
     return view('signin');
 });
+Route::get('/signout', function () {
+    Session::forget('user');
+    return redirect('/signin');
+});
+
 
 Route::post('/signin',[UserController::class,'signin']);
 Route::get('/',[ProductController::class,'index']);
