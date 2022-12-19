@@ -23,6 +23,7 @@ Route::get('/signout', function () {
 });
 
 Route::get("cartlist",[ProductController::class,'cartList']);
+Route::get("removecart/{id}",[ProductController::class,'removeCart']);
 
 
 Route::post('/signin',[UserController::class,'signin']);
