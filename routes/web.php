@@ -22,6 +22,8 @@ Route::get('/signout', function () {
     return redirect('/signin');
 });
 
+Route::get("cartlist",[ProductController::class,'cartList']);
+
 
 Route::post('/signin',[UserController::class,'signin']);
 Route::get('/',[ProductController::class,'index']);
