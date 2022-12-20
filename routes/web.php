@@ -25,6 +25,7 @@ Route::get('/signout', function () {
 Route::get("cartlist",[ProductController::class,'cartList']);
 Route::get("removecart/{id}",[ProductController::class,'removeCart']);
 Route::get("ordernow",[ProductController::class,'orderNow']);
+Route::post("orderplace",[ProductController::class,'orderPlace']);
 
 
 Route::post('/signin',[UserController::class,'signin']);
