@@ -21,7 +21,9 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        // we are registered session for session uses in authentication procedure
         \Illuminate\Session\Middleware\StartSession::class,
+        // here we have registered UserAuth middleware for the user who dont need to login again if they already logged in
         \App\Http\Middleware\UserAuth::class,
     ];
 

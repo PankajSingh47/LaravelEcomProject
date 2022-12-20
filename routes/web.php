@@ -1,19 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// here we have imported controllers for using them in routes
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
+
+ // here we have made all the route and their controller function so when a user click then how it works we  have defined here
 Route::get('/signin', function () {
     return view('signin');
 });
