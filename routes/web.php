@@ -21,6 +21,8 @@ Route::get('/signout', function () {
     Session::forget('user');
     return redirect('/signin');
 });
+Route::view("/signup","signup");
+Route::post("signup",[UserController::class,'signup']);
 
 Route::get("cartlist",[ProductController::class,'cartList']);
 Route::get("removecart/{id}",[ProductController::class,'removeCart']);
